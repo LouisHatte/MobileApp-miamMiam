@@ -21,12 +21,13 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text('Hello world'),
-          ],
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Image.asset('assets/images/pancakes.png'),
+            ],
+          ),
         ),
       ),
     );
