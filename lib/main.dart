@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'appColors.dart';
 import './widgets/gobackButton.dart';
 import './widgets/menuButton.dart';
+import 'widgets/appTitle.dart';
 
 void main() {
   runApp(App());
@@ -26,26 +27,14 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red,
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              Image.asset('assets/images/pancakes.png'),
-              GobackButton(),
-              MenuButton(),
-              Container(
-                child: Text(
-                  'Colorful pancakes',
-                  style: TextStyle(
-                    color: AppColors.darkBlue.withOpacity(1),
-                    fontFamily: 'Soin Sans Neue',
-                    fontWeight: FontWeight.bold,
-                    fontSize: 33,
-                  ),
-                ),
-              ),
-            ],
-          ),
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            Image.asset('assets/images/pancakes.png'),
+            GobackButton(),
+            MenuButton(),
+            AppTitle(),
+          ],
         ),
       ),
     );
