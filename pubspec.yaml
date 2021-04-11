@@ -9,6 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  custom_switch_button: ^0.5.0
 
 dev_dependencies:
   flutter_test:
@@ -21,8 +22,12 @@ flutter:
     - assets/images/
 
   fonts:
-    - family: Soin Sans Neue
+    - family: Soin Sans Neue Roman
+      fonts:
+        - asset: assets/fonts/SoinSansNeue-Roman.otf
+    - family: Soin Sans Neue Medium
+      fonts:
+        - asset: assets/fonts/SoinSansNeue-Medium.otf
+    - family: Soin Sans Neue Bold
       fonts:
         - asset: assets/fonts/SoinSansNeue-Bold.otf
-        - asset: assets/fonts/SoinSansNeue-Medium.otf
-        - asset: assets/fonts/SoinSansNeue-Roman.otf
