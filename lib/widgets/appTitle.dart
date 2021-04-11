@@ -7,7 +7,7 @@ class AppTitle extends StatelessWidget {
     return Text(
       'Colorful pancakes',
       style: TextStyle(
-        color: AppColors.darkBlue.withOpacity(1),
+        color: AppColors.darkBlue,
         fontFamily: 'Soin Sans Neue',
         fontWeight: FontWeight.bold,
         fontSize: 33,

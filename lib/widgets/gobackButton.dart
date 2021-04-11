@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../appColors.dart';
 
 class GobackButton extends StatelessWidget {
   @override
@@ -9,7 +10,7 @@ class GobackButton extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: <BoxShadow>[
           BoxShadow(
-            color: Color(0x00000014),
+            color: AppColors.grey14,
             offset: Offset(0, 3),
             blurRadius: 30,
           ),
@@ -21,7 +22,7 @@ class GobackButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          primary: Color(0xFFFFFFFF).withOpacity(1),
+          primary: AppColors.white,
         ),
         onPressed: () => print('Go Back.'),
         child: FittedBox(
@@ -29,7 +30,7 @@ class GobackButton extends StatelessWidget {
           child: Icon(
             Icons.arrow_back_ios_rounded,
             size: 24, // icon size not exactly the same
-            color: Color(0xff161531).withOpacity(1),
+            color: AppColors.darkBlue,
           ),
         ),
       ),
