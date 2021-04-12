@@ -7,7 +7,6 @@ class BottomNavbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         BottomNavBarButton(
           containerWidth: 49,
@@ -16,6 +15,7 @@ class BottomNavbar extends StatelessWidget {
           imageWidth: 25.86,
           imageHeight: 25.92,
           sizedBoxHeight: 6.08,
+          callBack: () => {print('C')},
         ),
         BottomNavBarButton(
           containerWidth: 41,
@@ -24,17 +24,29 @@ class BottomNavbar extends StatelessWidget {
           imageWidth: 20.95,
           imageHeight: 25.45,
           sizedBoxHeight: 6.84,
+          callBack: () => {print('D')},
         ),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              'assets/images/add.png',
-              width: g.getWidth(52.76),
-              height: g.getHeight(52.76),
+        TextButton(
+          style: ButtonStyle(
+            minimumSize: MaterialStateProperty.all<Size>(
+              Size(
+                g.getWidth(g.getWidth(52.76)),
+                g.getHeight(g.getHeight(57.38)),
+              ),
             ),
-            SizedBox(height: g.getHeight(4.62))
-          ],
+          ),
+          onPressed: () => {print('E')},
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/images/add.png',
+                width: g.getWidth(52.76),
+                height: g.getHeight(52.76),
+              ),
+              SizedBox(height: g.getHeight(4.62))
+            ],
+          ),
         ),
         BottomNavBarButton(
           containerWidth: 34,
@@ -43,6 +55,7 @@ class BottomNavbar extends StatelessWidget {
           imageWidth: 20.55,
           imageHeight: 25.31,
           sizedBoxHeight: 6.34,
+          callBack: () => {print('F')},
         ),
         BottomNavBarButton(
           containerWidth: 29,
@@ -51,6 +64,7 @@ class BottomNavbar extends StatelessWidget {
           imageWidth: 26,
           imageHeight: 26,
           sizedBoxHeight: 7,
+          callBack: () => {print('G')},
         ),
       ],
     );

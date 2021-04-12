@@ -10,6 +10,7 @@ class BottomNavBarButton extends StatelessWidget {
   double imageHeight;
   double sizedBoxHeight;
   double textHeight;
+  Function callBack;
 
   BottomNavBarButton({
     this.containerWidth,
@@ -18,19 +19,29 @@ class BottomNavBarButton extends StatelessWidget {
     this.imageWidth,
     this.imageHeight,
     this.sizedBoxHeight,
+    this.callBack,
   })  : assert(containerWidth != null),
         assert(containerHeight != null),
         assert(imageAsset != null),
         assert(imageWidth != null),
         assert(imageHeight != null),
-        assert(sizedBoxHeight != null);
+        assert(sizedBoxHeight != null),
+        assert(callBack != null);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: g.getWidth(this.containerWidth),
-      height: g.getHeight(this.containerHeight),
+    return TextButton(
+      style: ButtonStyle(
+        minimumSize: MaterialStateProperty.all<Size>(
+          Size(
+            g.getWidth(this.containerWidth),
+            g.getHeight(this.containerHeight),
+          ),
+        ),
+      ),
+      onPressed: callBack,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset(
             this.imageAsset,
