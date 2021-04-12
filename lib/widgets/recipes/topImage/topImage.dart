@@ -19,24 +19,21 @@ class TopImage extends StatelessWidget {
         Column(
           children: <Widget>[
             SizedBox(height: g.getHeight(55)),
-            FittedBox(
-              fit: BoxFit.fitWidth,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  SimpleButton(
-                    icon: Icons.arrow_back_ios_rounded,
-                    heightIcon: 5.63,
-                    callBack: () => {print('A')},
-                  ),
-                  SizedBox(width: g.getWidth(288)),
-                  SimpleButton(
-                    icon: Icons.menu_rounded,
-                    heightIcon: 13.59,
-                    callBack: () => {print('B')},
-                  ),
-                ],
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                SimpleButton(
+                  icon: Icons.arrow_back_ios_rounded,
+                  heightIcon: 18.54,
+                  callBack: () => {print('A')},
+                ),
+                SizedBox(width: g.getWidth(170)),
+                SimpleButton(
+                  icon: Icons.menu_rounded,
+                  heightIcon: 13.59,
+                  callBack: () => {print('B')},
+                ),
+              ],
             ),
             SizedBox(height: g.getHeight(270)),
             RecipeTitle(),

@@ -28,8 +28,8 @@ class Recipes extends StatelessWidget {
     g.screenWidth = MediaQuery.of(context).size.width;
     g.screenHeight = MediaQuery.of(context).size.height;
 
-    g.screenWidth = 414;
-    g.screenHeight = 978;
+    // g.screenWidth = 414;
+    // g.screenHeight = 978;
 
     return Scaffold(
       body: Container(
