@@ -1,16 +1,32 @@
-# miam_miam
+# MiamMiam
 
-A new Flutter project.
+A new Flutter project with some pancakes!
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+Clone the repository :
+```
+git clone git@github.com:LouisHatte/MiamMiam.git
+```
+Open the project with an IDE like Visual Studio Code.
 
-A few resources to get you started if this is your first Flutter project:
+Open a termial and make sur to be at the root of the project (where you can find the README.md file).
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Run the command :
+```
+flutter doctor
+```
+If everything is fine then you can start the project by running the command :
+```
+flutter run
+```
+After few minutes MiamMiam App will appear.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Notes
+
+This project scales a model to the current screen size used.
+If you want to see the version with the model size just uncomment this 2 lines in main.dart :
+```dart
+// g.screenWidth = 414;
+// g.screenHeight = 978;
+```
