@@ -8,6 +8,7 @@ class Instructions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
+        SizedBox(height: g.getHeight(26)),
         Instruction(
           idx: 1,
           instruction: d.firstInstruction,

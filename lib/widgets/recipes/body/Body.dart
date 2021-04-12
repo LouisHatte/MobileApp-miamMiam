@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miam_miam/widgets/recipes/body/content/Ingredients.dart';
 import 'package:miam_miam/widgets/recipes/body/content/Instructions.dart';
 import 'package:miam_miam/widgets/recipes/body/stats/Stats.dart';
 import 'package:miam_miam/globals.dart' as g;
@@ -32,7 +33,7 @@ class _BodyState extends State<Body> {
             callBack: _toggleContent,
           ),
           SizedBox(height: g.getHeight(13)),
-          !_isInstructions ? Instructions() : Text('B'),
+          !_isInstructions ? Instructions() : Ingredients(),
         ],
       ),
     );
