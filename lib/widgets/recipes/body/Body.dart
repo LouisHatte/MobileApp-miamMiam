@@ -14,7 +14,7 @@ class _BodyState extends State<Body> {
   bool _isInstructions = false;
 
   void _toggleContent() {
-    print('Hello');
+    print('H');
     setState(() {
       _isInstructions = !_isInstructions;
     });

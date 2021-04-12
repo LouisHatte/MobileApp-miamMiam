@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple_animations/simple_animations/controlled_animation.dart';
 import 'package:simple_animations/simple_animations/multi_track_tween.dart';
+import 'package:miam_miam/globals.dart' as g;
 
 class CustomSwitchButton extends StatelessWidget {
   final bool checked;
@@ -40,7 +41,8 @@ class CustomSwitchButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var tween = MultiTrackTween([
-      Track("paddingLeft").add(animationDuration, Tween(begin: 0.0, end: 20.0)),
+      Track("paddingLeft")
+          .add(animationDuration, Tween(begin: 0.0, end: g.getWidth(155))),
       Track("color").add(animationDuration,
           ColorTween(begin: unCheckedColor, end: checkedColor)),
     ]);

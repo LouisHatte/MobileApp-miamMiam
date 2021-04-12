@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miam_miam/appColors.dart';
-import 'package:miam_miam/widgets/recipes/body/switcher/badSwitcherLibrary.dart';
+import 'package:miam_miam/widgets/recipes/body/switcher/SwitcherLibraryModified.dart';
 import 'package:miam_miam/globals.dart' as g;
 
 class SwitchButton extends StatelessWidget {
@@ -56,7 +56,7 @@ class SwitchButton extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(width: g.getWidth(71)),
+                    SizedBox(width: g.getHeight(71)),
                     Container(
                       height: g.getHeight(16),
                       child: FittedBox(

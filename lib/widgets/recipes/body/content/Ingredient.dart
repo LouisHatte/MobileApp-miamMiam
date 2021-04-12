@@ -12,17 +12,18 @@ class Ingredient extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Container(
           width: g.getWidth(342),
           child: Row(
-            // mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              new Container(
+              SizedBox(width: g.getWidth(57.97)),
+              Container(
                 height: g.getHeight(10),
                 width: g.getWidth(10),
-                decoration: new BoxDecoration(
+                decoration: BoxDecoration(
                   color: AppColors.lightBlue,
                   shape: BoxShape.circle,
                 ),
