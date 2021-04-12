@@ -4,12 +4,15 @@ import 'package:miam_miam/globals.dart' as g;
 
 class SimpleButton extends StatelessWidget {
   final IconData icon;
+  final double heightIcon;
   final Function callBack;
 
   SimpleButton({
     this.icon,
+    this.heightIcon,
     this.callBack,
   })  : assert(icon != null),
+        assert(heightIcon != null),
         assert(callBack != null);
 
   @override
@@ -36,11 +39,14 @@ class SimpleButton extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
         ),
         onPressed: this.callBack,
-        child: FittedBox(
-          fit: BoxFit.contain,
-          child: Icon(
-            this.icon,
-            color: AppColors.darkBlue,
+        child: Container(
+          height: g.getHeight(this.heightIcon),
+          child: FittedBox(
+            fit: BoxFit.fitHeight,
+            child: Icon(
+              this.icon,
+              color: AppColors.darkBlue,
+            ),
           ),
         ),
       ),
