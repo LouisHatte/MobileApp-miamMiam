@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:miam_miam/widgets/recipes/body/content/Instruction.dart';
+import 'package:miam_miam/data.dart' as d;
+import 'package:miam_miam/globals.dart' as g;
 
 class Instructions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      constraints: BoxConstraints(maxWidth: 311),
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Text('1'),
-          Column(
-            children: <Widget>[
-              Container(
-                  // constraints: BoxConstraints(minWidth: 100),
-                  // child: Text(
-                  //     'In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth.'),
-                  ),
-            ],
-          ),
-        ],
-      ),
+    return Column(
+      children: <Widget>[
+        Instruction(
+          idx: 1,
+          instruction: d.firstInstruction,
+        ),
+        SizedBox(height: g.getHeight(50)),
+        Instruction(
+          idx: 2,
+          instruction: d.secondInstruction,
+        ),
+      ],
     );
   }
 }

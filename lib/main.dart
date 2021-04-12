@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miam_miam/appColors.dart';
 import 'package:miam_miam/widgets/recipes/body/Body.dart';
 import 'package:miam_miam/widgets/recipes/topImage/topImage.dart';
 import 'globals.dart' as g;

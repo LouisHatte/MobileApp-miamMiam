@@ -1,63 +1,80 @@
 import 'package:flutter/material.dart';
-// import 'package:custom_switch_button/custom_switch_button.dart';
 import 'package:miam_miam/appColors.dart';
-import 'package:miam_miam/widgets/switcher.dart';
+import 'package:miam_miam/widgets/recipes/body/switcher/badSwitcherLibrary.dart';
+import 'package:miam_miam/globals.dart' as g;
 
-class RecipesSwitcherButton extends StatefulWidget {
-  bool isIngredients = false;
-  @override
-  _RecipesSwitcherButtonState createState() => _RecipesSwitcherButtonState();
-}
+class SwitchButton extends StatelessWidget {
+  final bool isOk;
+  final Function callBack;
 
-class _RecipesSwitcherButtonState extends State<RecipesSwitcherButton> {
+  SwitchButton({
+    this.isOk,
+    this.callBack,
+  })  : assert(isOk != null),
+        assert(callBack != null);
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        setState(() {
-          this.widget.isIngredients = !this.widget.isIngredients;
-        });
-      },
+      onTap: () => this.callBack(),
       child: Container(
         child: Stack(
           children: <Widget>[
-            CustomSwitchButton(
-              buttonWidth: 311,
-              buttonHeight: 49,
-              indicatorWidth: 153,
-              indicatorBorderRadius: 22,
-              backgroundBorderRadius: 25,
-              backgroundColor: AppColors.greyF0,
-              unCheckedColor: AppColors.white,
-              checkedColor: AppColors.white,
-              animationDuration: Duration(milliseconds: 400),
-              checked: this.widget.isIngredients,
-            ),
-            Container(
-              padding: EdgeInsets.fromLTRB(20, 14, 0, 0),
-              child: Text(
-                'Instructions',
-                style: TextStyle(
-                  color: this.widget.isIngredients
-                      ? AppColors.darkGrey
-                      : AppColors.lightBlue,
-                  fontFamily: 'Soin Sans Neue',
-                  fontSize: 16,
-                ),
+            Center(
+              child: CustomSwitchButton(
+                buttonWidth: g.getWidth(311),
+                buttonHeight: g.getHeight(49),
+                indicatorWidth: g.getWidth(153),
+                indicatorBorderRadius: g.getHeight(22),
+                backgroundBorderRadius: g.getHeight(25),
+                backgroundColor: AppColors.greyF0,
+                unCheckedColor: AppColors.white,
+                checkedColor: AppColors.white,
+                animationDuration: Duration(milliseconds: 400),
+                checked: this.isOk,
               ),
             ),
-            Container(
-              padding: EdgeInsets.fromLTRB(200, 14, 0, 0),
-              child: Text(
-                'Ingredients',
-                style: TextStyle(
-                  color: this.widget.isIngredients
-                      ? AppColors.lightBlue
-                      : AppColors.darkGrey,
-                  fontFamily: 'Soin Sans Neue',
-                  fontSize: 16,
+            Column(
+              children: [
+                SizedBox(height: g.getHeight(18)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      height: g.getHeight(16),
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          'Instructions',
+                          style: TextStyle(
+                            color: this.isOk
+                                ? AppColors.darkBlue
+                                : AppColors.lightBlue,
+                            fontFamily: 'Soin Sans Neue Medium',
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: g.getWidth(71)),
+                    Container(
+                      height: g.getHeight(16),
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          'Ingredients',
+                          style: TextStyle(
+                            color: this.isOk
+                                ? AppColors.lightBlue
+                                : AppColors.darkBlue,
+                            fontFamily: 'Soin Sans Neue Medium',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
+              ],
             ),
           ],
         ),

@@ -62,7 +62,7 @@ class BottomNavBarButton extends StatelessWidget {
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
