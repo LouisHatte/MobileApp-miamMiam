@@ -22,9 +22,15 @@ class TopImage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SimpleButton(icon: Icons.arrow_back_ios_rounded),
+                SimpleButton(
+                  icon: Icons.arrow_back_ios_rounded,
+                  callBack: () => {print('A')},
+                ),
                 SizedBox(width: g.getWidth(288)),
-                SimpleButton(icon: Icons.menu_rounded),
+                SimpleButton(
+                  icon: Icons.menu_rounded,
+                  callBack: () => {print('B')},
+                ),
               ],
             ),
             SizedBox(height: g.getHeight(270)),
