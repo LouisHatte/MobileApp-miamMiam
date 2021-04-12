@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miam_miam/widgets/recipes/body/Body.dart';
 import 'package:miam_miam/widgets/recipes/topImage/topImage.dart';
 import 'globals.dart' as g;
 import 'package:miam_miam/widgets/recipes/bottomNavbar/BottomNavbar.dart';
@@ -41,7 +42,7 @@ class Recipes extends StatelessWidget {
               child: TopImage(),
             ),
             Expanded(
-              child: Container(),
+              child: Body(),
             ),
             Container(
               height: g.getHeight(93),

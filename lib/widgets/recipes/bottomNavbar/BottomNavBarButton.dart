@@ -3,14 +3,14 @@ import 'package:miam_miam/appColors.dart';
 import 'package:miam_miam/globals.dart' as g;
 
 class BottomNavBarButton extends StatelessWidget {
-  double containerWidth;
-  double containerHeight;
-  String imageAsset;
-  double imageWidth;
-  double imageHeight;
-  double sizedBoxHeight;
-  double textHeight;
-  Function callBack;
+  final double containerWidth;
+  final double containerHeight;
+  final String imageAsset;
+  final double imageWidth;
+  final double imageHeight;
+  final double sizedBoxHeight;
+  final double textHeight;
+  final Function callBack;
 
   BottomNavBarButton({
     this.containerWidth,
@@ -19,6 +19,7 @@ class BottomNavBarButton extends StatelessWidget {
     this.imageWidth,
     this.imageHeight,
     this.sizedBoxHeight,
+    this.textHeight,
     this.callBack,
   })  : assert(containerWidth != null),
         assert(containerHeight != null),

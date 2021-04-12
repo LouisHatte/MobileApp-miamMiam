@@ -3,8 +3,8 @@ import '../../../appColors.dart';
 import 'package:miam_miam/globals.dart' as g;
 
 class SimpleButton extends StatelessWidget {
-  IconData icon;
-  Function callBack;
+  final IconData icon;
+  final Function callBack;
 
   SimpleButton({
     this.icon,
