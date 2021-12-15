@@ -6,7 +6,7 @@ A new Flutter project with some pancakes!
 
 Clone the repository :
 ```
-git clone git@github.com:LouisHatte/MiamMiam.git
+git clone git@github.com:LouisHatte/MobileApp-miamMiam.git
 ```
 Open the project with an IDE like Visual Studio Code.
 
